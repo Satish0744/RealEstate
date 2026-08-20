@@ -268,38 +268,72 @@ const Hero = () => {
           </button>
         </div>
 
-        {/* Hero Text Content - Mobile responsive */}
+        {/* Hero Text Content - Desktop: positioned between left panel and right image, Mobile: centered */}
         <div
           className="absolute z-20 pointer-events-none"
           style={{
-            bottom: '60px',
+            bottom: '80px',
             left: '20px',
             right: '20px',
             maxWidth: '100%',
           }}
         >
-          <div
-            className="font-['Bon_Vivant'] font-normal italic mb-1"
-            style={{
-              color: '#D0B580',
-              fontSize: 'clamp(28px, 6vw, 60px)',
-              lineHeight: '100%',
-              letterSpacing: '-0.22px',
-            }}
-          >
-            Signature Homes
+          {/* Desktop version - centered between left panel and image */}
+          <div className="hidden md:block">
+            <div
+              className="font-['Bon_Vivant'] font-normal italic mb-1"
+              style={{
+                color: '#D0B580',
+                fontSize: 'clamp(36px, 4.2vw, 60px)',
+                lineHeight: '100%',
+                letterSpacing: '-0.22px',
+                marginLeft: `${LEFT_W - 130}px`,
+                maxWidth: '760px',
+              }}
+            >
+              Signature Homes
+            </div>
+
+            <div
+              className="font-['Bon_Vivant'] font-normal text-white"
+              style={{
+                fontSize: 'clamp(28px, 4vw, 60px)',
+                lineHeight: '108%',
+                letterSpacing: '-0.22px',
+                marginLeft: `${LEFT_W - 130}px`,
+                maxWidth: '760px',
+              }}
+            >
+              All homes are for a lifetime.<br />
+              This one is once in a lifetime.
+            </div>
           </div>
 
-          <div
-            className="font-['Bon_Vivant'] font-normal text-white"
-            style={{
-              fontSize: 'clamp(20px, 4.5vw, 60px)',
-              lineHeight: '108%',
-              letterSpacing: '-0.22px',
-            }}
-          >
-            All homes are for a lifetime.<br />
-            This one is once in a lifetime.
+          {/* Mobile version - full width */}
+          <div className="md:hidden">
+            <div
+              className="font-['Bon_Vivant'] font-normal italic mb-1"
+              style={{
+                color: '#D0B580',
+                fontSize: 'clamp(28px, 6vw, 60px)',
+                lineHeight: '100%',
+                letterSpacing: '-0.22px',
+              }}
+            >
+              Signature Homes
+            </div>
+
+            <div
+              className="font-['Bon_Vivant'] font-normal text-white"
+              style={{
+                fontSize: 'clamp(20px, 4.5vw, 60px)',
+                lineHeight: '108%',
+                letterSpacing: '-0.22px',
+              }}
+            >
+              All homes are for a lifetime.<br />
+              This one is once in a lifetime.
+            </div>
           </div>
         </div>
 
